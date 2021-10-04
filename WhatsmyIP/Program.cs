@@ -9,13 +9,13 @@ namespace Examples.System.Net
     {
         public static void SendEmail(string response)
         {
-            var smtpClient = new SmtpClient("66.90.130.119")
+            var smtpClient = new SmtpClient("<SMTP Server>")
             {
                 Port = 25,
-                Credentials = new NetworkCredential("markm@moorecasa.com", "Time2run2")
+                Credentials = new NetworkCredential("<Username>", "<Password>")
             };
-            String From = "markm@moorecasa.com";
-            String To = "markm@microsoft.com";
+            String From = "<From Email Address>";
+            String To = "<to emial address>";
             String subject = "What's my IP'";
             String body = response;
             smtpClient.Send(From, To, subject, body);
